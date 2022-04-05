@@ -550,7 +550,7 @@ function initView() {
                     previousScaleZoomOrigin = [scaleZoomOrigin[0], scaleZoomOrigin[1]];
                     applyView();
                 }
-                if (document.documentElement.clientWidth < 500) {
+                if (document.documentElement.clientWidth < 640) {
 
                     objectsContainer.innerHTML = "";
 

@@ -32,7 +32,8 @@ window.addEventListener("error", function (e) {
     document.getElementById("loadingContent").innerHTML = errorMessage;
 });
 
-var atlas = [{
+var atlas = [
+    {
         "id": 0,
         "name": "哔哩哔哩",
         "description": "",
@@ -954,7 +955,8 @@ var atlas = [{
                 279.5
             ]
         ]
-    }, {
+    },
+    {
         "id": 3,
         "name": "osu!",
         "description": "待续",
@@ -1030,8 +1032,9 @@ var atlas = [{
                 558.5
             ]
         ]
-    }, {
-        "id": 3,
+    }
+    {
+        "id": 4,
         "name": "+100%",
         "description": "并非 Steam 打折券。",
         "website": "",
