@@ -32,8 +32,7 @@ window.addEventListener("error", function (e) {
     document.getElementById("loadingContent").innerHTML = errorMessage;
 });
 
-var atlas = [
-    {
+var atlas = [{
         "id": 0,
         "name": "哔哩哔哩",
         "description": "",
@@ -1032,7 +1031,7 @@ var atlas = [
                 558.5
             ]
         ]
-    }
+    },
     {
         "id": 4,
         "name": "+100%",
@@ -1099,6 +1098,35 @@ var atlas = [
             [
                 1195.5,
                 540.5
+            ]
+        ]
+    },
+    {
+        "id": 5,
+        "name": "test",
+        "description": "",
+        "website": "",
+        "subreddit": "",
+        "center": [
+            874.5,
+            151.5
+        ],
+        "path": [
+            [
+                490.5,
+                133.5
+            ],
+            [
+                1236.5,
+                125.5
+            ],
+            [
+                1238.5,
+                174.5
+            ],
+            [
+                488.5,
+                174.5
             ]
         ]
     }

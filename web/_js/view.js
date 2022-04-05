@@ -345,7 +345,7 @@ function initView() {
                 (e.clientX - (container.clientWidth / 2 - innerContainer.clientWidth / 2 + zoomOrigin[0] + container.offsetLeft)) / zoom, (e.clientY - (container.clientHeight / 2 - innerContainer.clientHeight / 2 + zoomOrigin[1] + container.offsetTop)) / zoom
             ];
 
-            if (pos[0] <= 1100 && pos[0] >= -100 && pos[0] <= 1100 && pos[0] >= -100) {
+            if (pos[0] <= 1280 + 100 && pos[0] >= -100 && pos[0] <= 1280 + 100 && pos[0] >= -100) {
                 var newHovered = [];
                 for (var i = 0; i < atlas.length; i++) {
                     if (pointIsInPolygon(pos, atlas[i].path)) {
