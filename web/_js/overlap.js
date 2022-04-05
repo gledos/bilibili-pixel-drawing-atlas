@@ -18,7 +18,7 @@
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 	For more information, see:
-	http://place-atlas.stefanocoding.me/license.txt
+	https://draemm.li/various/place-atlas/license.txt
 
 	========================================================================
 */
@@ -34,7 +34,7 @@ function initOverlap(){
 
 	var backgroundCanvas = document.createElement("canvas");
 	backgroundCanvas.width = 1280;
-	backgroundCanvas.height = 1280;
+	backgroundCanvas.height = 720;
 	var backgroundContext = backgroundCanvas.getContext("2d");
 
 	var filterInput = document.getElementById("searchList");
@@ -131,6 +131,31 @@ function initOverlap(){
 		updateLines();
 	});
 
+	function createInfoBlock(entry){
+		var element = document.createElement("div");
+		element.className = "object";
+
+		var html = '<h2><a href="?id='+entry.id+'">'+entry.name+'</a></h2>';
+		
+		if(entry.description){
+			html += '<p>'+entry.description+'</p>';
+		}
+		if(entry.website){
+			html += '<a target="_blank" href='+entry.website+'>Website</a>';
+		}
+		if(entry.subreddit){
+			if(entry.subreddit.substring(0, 2) == "r/"){
+				entry.subreddit = "/" + entry.subreddit;
+			} else if(entry.subreddit.substring(0, 1) != "/"){
+				entry.subreddit = "/r/" + entry.subreddit;
+			}
+			html += '<a target="_blank" href=https://reddit.com'+entry.subreddit+'>'+entry.subreddit+'</a>';
+		}
+		element.innerHTML += html;
+		
+		return element;
+	}
+
 	function highlightEntryFromUrl(){
 
 		var objectsContainer = document.getElementById("objectsList");
@@ -186,7 +211,7 @@ function initOverlap(){
 				,(e.clientY - (container.clientHeight/2 - innerContainer.clientHeight/2 + zoomOrigin[1] + container.offsetTop))/zoom
 			];
 
-			if(pos[0] <= 2200 && pos[0] >= -100 && pos[0] <= 2200 && pos[0] >= -100){
+			if(pos[0] <= 1100 && pos[0] >= -100 && pos[0] <= 1100 && pos[0] >= -100){
 				var newHovered = [];
 				for(var i = 0; i < atlas.length; i++){
 					if(pointIsInPolygon(pos, atlas[i].path)){

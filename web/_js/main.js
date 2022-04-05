@@ -18,7 +18,7 @@
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 	For more information, see:
-	http://place-atlas.stefanocoding.me/license.txt
+	https://draemm.li/various/place-atlas/license.txt
 	
 	========================================================================
 */
@@ -60,12 +60,12 @@ function applyView(){
 	//console.log(zoomOrigin, scaleZoomOrigin);
 	//console.log(scaleZoomOrigin[0]);
 
-	scaleZoomOrigin[0] = Math.max(-1000, Math.min(1000, scaleZoomOrigin[0]));
-	scaleZoomOrigin[1] = Math.max(-1000, Math.min(1000, scaleZoomOrigin[1]));
+	scaleZoomOrigin[0] = Math.max(-640, Math.min(640, scaleZoomOrigin[0]));
+	scaleZoomOrigin[1] = Math.max(-360, Math.min(360, scaleZoomOrigin[1]));
 
 	zoomOrigin = [scaleZoomOrigin[0]*zoom, scaleZoomOrigin[1]*zoom];
 
-	innerContainer.style.height = (~~(zoom*1280))+"px";
+	innerContainer.style.height = (~~(zoom*720))+"px";
 	innerContainer.style.width = (~~(zoom*1280))+"px";
 	
 	innerContainer.style.left = ~~(container.clientWidth/2 - innerContainer.clientWidth/2 + zoomOrigin[0] + container.offsetLeft)+"px";
@@ -73,25 +73,9 @@ function applyView(){
 	
 }
 
-var atlas = null;
-
 init();
 
-async function init(){
-
-	let resp = await fetch("/atlas.json");
-	atlas = await resp.json();
-	atlas.sort(function (a, b) {
-		if (a.center[1] < b.center[1]) {
-			return -1;
-		}
-		if (a.center[1] > b.center[1]) {
-			return 1;
-		}
-		// a must be equal to b
-		return 0;
-	});
-	
+function init(){
 
 	//console.log(document.documentElement.clientWidth, document.documentElement.clientHeight);
 
