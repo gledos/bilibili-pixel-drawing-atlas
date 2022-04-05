@@ -1,4 +1,7 @@
-# The Place Atlas
+# The Bilibili Pixel Drawing Atlas
+
+这里是哔哩哔哩夏日绘板活动的地图集，
+
 The /r/place Atlas is a project aiming to catalog all the artworks created during Reddit's /r/place event.
 This project was created by Roland Rytz and is licensed under the GNU Affero General Public License v3.0.
 

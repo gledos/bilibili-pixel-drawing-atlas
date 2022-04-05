@@ -65,8 +65,8 @@ function applyView(){
 
 	zoomOrigin = [scaleZoomOrigin[0]*zoom, scaleZoomOrigin[1]*zoom];
 
-	innerContainer.style.height = (~~(zoom*1000))+"px";
-	innerContainer.style.width = (~~(zoom*1000))+"px";
+	innerContainer.style.height = (~~(zoom*720))+"px";
+	innerContainer.style.width = (~~(zoom*1280))+"px";
 	
 	innerContainer.style.left = ~~(container.clientWidth/2 - innerContainer.clientWidth/2 + zoomOrigin[0] + container.offsetLeft)+"px";
 	innerContainer.style.top = ~~(container.clientHeight/2 - innerContainer.clientHeight/2 + zoomOrigin[1] + container.offsetTop)+"px";

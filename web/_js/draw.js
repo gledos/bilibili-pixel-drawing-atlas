@@ -47,8 +47,8 @@ function initDraw(){
 	var shiftPressed = false;
 
 	var backgroundCanvas = document.createElement("canvas");
-	backgroundCanvas.width = 1000;
-	backgroundCanvas.height = 1000;
+	backgroundCanvas.width = 1280;
+	backgroundCanvas.height = 720;
 	var backgroundContext = backgroundCanvas.getContext("2d");
 
 	var highlightUncharted = true;
