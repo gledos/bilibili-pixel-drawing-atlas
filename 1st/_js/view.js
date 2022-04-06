@@ -1,23 +1,23 @@
 /*
-	========================================================================
-	The /r/place Atlas
+    ========================================================================
+    The /r/place Atlas
 
-	An Atlas of Reddit's /r/place, with information to each
-	artwork	of the canvas provided by the community.
+    An Atlas of Reddit's /r/place, with information to each
+    artwork    of the canvas provided by the community.
 
-	Copyright (C) 2017 Roland Rytz <roland@draemm.li>
-	Licensed under the GNU Affero General Public License Version 3
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU Affero General Public License as
-	published by the Free Software Foundation, either version 3 of the
-	License, or (at your option) any later version.
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-	For more information, see:
-	https://draemm.li/various/place-atlas/license.txt
+    Copyright (C) 2017 Roland Rytz <roland@draemm.li>
+    Licensed under the GNU Affero General Public License Version 3
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    For more information, see:
+    http://place-atlas.stefanocoding.me/license.txt
 
-	========================================================================
+    ========================================================================
 */
 var linesCanvas = document.getElementById("linesCanvas");
 var linesContext = linesCanvas.getContext("2d");
@@ -150,9 +150,9 @@ function initView() {
 
     // parse linked atlas entry id from link hash
     /*if (window.location.hash.substring(3)){
-    	zoom = 4;
-    	applyView();
-    	highlightEntryFromUrl();
+        zoom = 4;
+        applyView();
+        highlightEntryFromUrl();
     }*/
 
     if (document.documentElement.clientWidth > 1280) {
@@ -250,36 +250,6 @@ function initView() {
         }
     }
 
-    function createInfoBlock(entry) {
-        var element = document.createElement("div");
-        element.className = "object";
-
-        var html = "<h2><a href=\"?id=" + entry.id + "\">" + entry.name + "</a></h2>";
-
-        if (entry.description) {
-            html += "<p>" + entry.description + "</p>";
-        }
-        if (entry.website) {
-            html += "<a target=\"_blank\" href=" + entry.website + ">Website</a>";
-        }
-        if (entry.subreddit) {
-            var subreddits = entry.subreddit.split(",");
-
-            for (var i in subreddits) {
-                var subreddit = subreddits[i].trim();
-                if (subreddit.substring(0, 2) == "r/") {
-                    subreddit = "/" + subreddit;
-                } else if (subreddit.substring(0, 1) != "/") {
-                    subreddit = "/r/" + subreddit;
-                }
-                html += "<a target=\"_blank\" href=https://reddit.com" + subreddit + ">" + subreddit + "</a>";
-            }
-        }
-        element.innerHTML += html;
-
-        return element;
-    }
-
     function highlightEntryFromUrl() {
 
         var objectsContainer = document.getElementById("objectsList");
@@ -290,7 +260,7 @@ function initView() {
         if (args) {
             id = args.split("id=")[1];
             if (id) {
-                id = parseInt(id.split("&")[0]);
+                id = id.split("&")[0];
             }
         }
 
@@ -303,7 +273,7 @@ function initView() {
         if (entry.length === 1) {
             entry = entry[0];
 
-            document.title = entry.name + " on the /r/place Atlas";
+            document.title = entry.name + " on the 2022 /r/place Atlas";
 
             var infoElement = createInfoBlock(entry);
             objectsContainer.innerHTML = "";
@@ -345,7 +315,7 @@ function initView() {
                 (e.clientX - (container.clientWidth / 2 - innerContainer.clientWidth / 2 + zoomOrigin[0] + container.offsetLeft)) / zoom, (e.clientY - (container.clientHeight / 2 - innerContainer.clientHeight / 2 + zoomOrigin[1] + container.offsetTop)) / zoom
             ];
 
-            if (pos[0] <= 1280 + 100 && pos[0] >= -100 && pos[0] <= 1280 + 100 && pos[0] >= -100) {
+            if (pos[0] <= 1280 && pos[0] >= -100 && pos[0] <= 1280 && pos[0] >= -100) {
                 var newHovered = [];
                 for (var i = 0; i < atlas.length; i++) {
                     if (pointIsInPolygon(pos, atlas[i].path)) {
@@ -719,6 +689,8 @@ function initView() {
     });
 
     container.addEventListener("touchend", function (e) {
+        e.preventDefault()
+
         //console.log(e);
         //console.log(e.changedTouches[0].clientX);
         if (e.changedTouches.length == 1) {
@@ -750,7 +722,7 @@ function initView() {
             wrapper.className = wrapper.className.replace(/ listHidden/g, "");
         }
 
-        if (document.documentElement.clientWidth < 1280 && viewportWidth >= 10012800) {
+        if (document.documentElement.clientWidth < 1280 && viewportWidth >= 1280) {
             entriesListShown = false;
             wrapper.className += " listHidden";
         }

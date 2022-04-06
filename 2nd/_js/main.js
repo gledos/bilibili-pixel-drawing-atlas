@@ -18,7 +18,7 @@
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 	For more information, see:
-	https://draemm.li/various/place-atlas/license.txt
+	http://place-atlas.stefanocoding.me/license.txt
 	
 	========================================================================
 */
@@ -73,9 +73,25 @@ function applyView(){
 	
 }
 
+var atlas = null;
+
 init();
 
-function init(){
+async function init(){
+
+	let resp = await fetch("./atlas.json");
+	atlas = await resp.json();
+	atlas.sort(function (a, b) {
+		if (a.center[1] < b.center[1]) {
+			return -1;
+		}
+		if (a.center[1] > b.center[1]) {
+			return 1;
+		}
+		// a must be equal to b
+		return 0;
+	});
+	
 
 	//console.log(document.documentElement.clientWidth, document.documentElement.clientHeight);
 
@@ -119,6 +135,33 @@ function init(){
 			initOverlap();
 		}
 	}
+	
+	function changeOverlapMode(){
+		console.log(mode)
+		switch(mode){
+			case "overlap":
+				window.location.href = "?mode=explore"
+				break;
+			case "explore":
+				window.location.href = "?"
+				break;
+			default:
+				window.location.href = "?mode=overlap"
+				break;
+		}
+
+		return false;
+	}
+
+	const modeMap = {
+		"view": "Overlap",
+		"overlap": "Explore",
+		"explore": "Atlas"
+	}
+
+	const toggleMode = document.getElementById("toggleMode");
+	toggleMode.onclick = changeOverlapMode;
+	toggleMode.innerHTML = modeMap[mode];
 
 	document.getElementById("loading").style.display = "none";
 

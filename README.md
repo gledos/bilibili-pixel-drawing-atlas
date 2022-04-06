@@ -5,7 +5,7 @@ This project was created by Roland Rytz and is licensed under the GNU Affero Gen
 
 ---
 
-你可以点击 [这里](https://bilipda.gledos.science/1st/) 查看第一期的夏日绘板。
+这里是 [第一期](https://bilipda.gledos.science/1st/) 与 [第二期](https://bilipda.gledos.science/2nd/) 的夏日绘板。
 
 ## How To Contribute
 
