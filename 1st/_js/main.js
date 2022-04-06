@@ -137,13 +137,13 @@ async function init() {
 		console.log(mode)
 		switch (mode) {
 			case "explore":
-				window.location.href = "?"
+				window.location.href = "?mode=overlap"
 				break;
 			case "overlap":
-				window.location.href = "?mode=explore"
+				window.location.href = "?"
 				break;
 			default:
-				window.location.href = "?mode=overlap"
+				window.location.href = "?mode=explore"
 				break;
 		}
 
@@ -151,9 +151,9 @@ async function init() {
 	}
 
 	const modeMap = {
-		"view": "Overlap",
-		"overlap": "探索",
-		"explore": "Atlas"
+		"view": "探索",
+		"explore": "Overlap",
+		"overlap": "互动地图"
 	}
 
 	const toggleMode = document.getElementById("toggleMode");
