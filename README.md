@@ -28,4 +28,6 @@ This project was created by Roland Rytz,  Stefano Haagmans and is licensed under
 
 ## 鸣谢列表
 
-[Dreamink0 (Dream_ink)](https://github.com/Dreamink0)、[duyya](https://github.com/duyya)、[yzqzss](https://github.com/yzqzss)、[mkpoli](https://github.com/mkpoli)、[TingChieh](https://github.com/TingChieh)、[N-628 (Xwyqi Rpwsta)](https://github.com/N-628)
+此项目的记录，离不开以下成员的贡献。
+
+[Dreamink0 (Dream_ink)](https://github.com/Dreamink0)、[duyya](https://github.com/duyya)、[yzqzss](https://github.com/yzqzss)、[mkpoli](https://github.com/mkpoli)、[TingChieh](https://github.com/TingChieh)、[N-628 (Xwyqi Rpwsta)](https://github.com/N-628)、[Jan30chen](https://github.com/Jan30chen)
