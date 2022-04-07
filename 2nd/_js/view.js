@@ -273,7 +273,7 @@ function initView() {
         if (entry.length === 1) {
             entry = entry[0];
 
-            document.title = entry.name + " on the 2022 /r/place Atlas";
+            document.title = entry.name + " 在哔哩哔哩夏日绘板第二期";
 
             var infoElement = createInfoBlock(entry);
             objectsContainer.innerHTML = "";
