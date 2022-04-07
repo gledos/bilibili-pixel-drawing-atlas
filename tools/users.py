@@ -17,10 +17,10 @@ users.add("Shovel_Ship");
 users.add("Zequez");
 
 for submission in reddit.subreddit('placeAtlas2').new(limit=10000):
-	try:
-		users.add(submission.author.name)
-	except AttributeError:
-		print(submission.title)
+    try:
+        users.add(submission.author.name)
+    except AttributeError:
+        print(submission.title)
 
 users = list(users)
 users = sorted(users, key=str.lower)
@@ -28,4 +28,4 @@ users = sorted(users, key=str.lower)
 print(len(users))
 
 for user in users:
-	outfile.write("\t\t\t\t\t<a href=\"https://reddit.com/user/"+user+"\" target=\"_blank\">"+user+"</a>\n")
+    outfile.write("\t\t\t\t\t<a href=\"https://reddit.com/user/"+user+"\" target=\"_blank\">"+user+"</a>\n")

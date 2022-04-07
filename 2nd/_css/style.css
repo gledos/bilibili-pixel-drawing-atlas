@@ -1,23 +1,23 @@
 /*
-	========================================================================
-	The /r/place Atlas
-	
-	An Atlas of Reddit's /r/place, with information to each
-	artwork	of the canvas provided by the community.
-	
-	Copyright (C) 2017 Roland Rytz <roland@draemm.li>
-	Licensed under the GNU Affero General Public License Version 3
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU Affero General Public License as
-	published by the Free Software Foundation, either version 3 of the
-	License, or (at your option) any later version.
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-	For more information, see:
-	https://draemm.li/various/place-atlas/license.txt
-	
-	========================================================================
+    ========================================================================
+    The /r/place Atlas
+    
+    An Atlas of Reddit's /r/place, with information to each
+    artwork    of the canvas provided by the community.
+    
+    Copyright (C) 2017 Roland Rytz <roland@draemm.li>
+    Licensed under the GNU Affero General Public License Version 3
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    For more information, see:
+    https://draemm.li/various/place-atlas/license.txt
+    
+    ========================================================================
 */
 
 @font-face {
@@ -28,181 +28,181 @@
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	border: none;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
 }
 
 html, body {
-	min-height: 100%;
-	min-width: 100%;
-	height: 100%;
-	width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 p {
-	line-height: 1.5em;
-	margin-bottom: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
 }
 
 body {
-	overflow: hidden;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	
-	font-family: dejavu, sans, Sans-Serif;
-	background-color: #111;
-	color: #FFF;
-	
-	line-height: 1.15;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    font-family: dejavu, sans, Sans-Serif;
+    background-color: #111;
+    color: #FFF;
+    
+    line-height: 1.15;
 }
 
 #wrapper {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	-webkit-overflow-scrolling: touch;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 a {
-	color: #FFAA00;
-	text-decoration: none;
+    color: #FFAA00;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 button,
 #aboutBackButton,
 #drawBackButton {
-	background-image: linear-gradient(to bottom, #888, #666);
-	border: 1px #000 solid;
-	color: #FFF;
-	text-align: center;
-	display: inline-block;
-	padding: 5px;
-	cursor: pointer;
-	text-shadow: 1px 1px 0 #444;
+    background-image: linear-gradient(to bottom, #888, #666);
+    border: 1px #000 solid;
+    color: #FFF;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    text-shadow: 1px 1px 0 #444;
 }
 
 button::-moz-focus-inner {
-	border: 0;
+    border: 0;
 }
 
 button:disabled,
 button:disabled:hover {
-	background-image: none;
-	background-color: #666;
-	color: #AAA;
-	cursor: default;
+    background-image: none;
+    background-color: #666;
+    color: #AAA;
+    cursor: default;
 }
 
 button:hover,
 #aboutBackButton:hover,
 #drawBackButton:hover {
-	background-image: linear-gradient(to bottom, #999, #777);
-	text-decoration: none;
+    background-image: linear-gradient(to bottom, #999, #777);
+    text-decoration: none;
 }
 
 input[type="text"],
 textArea {
-	background-color: #444;
-	border: 1px #000 solid;
-	margin-bottom: 4px;
-	padding: 5px 5px;
-	color: #FFF;
-	box-sizing: border-box;
+    background-color: #444;
+    border: 1px #000 solid;
+    margin-bottom: 4px;
+    padding: 5px 5px;
+    color: #FFF;
+    box-sizing: border-box;
 }
 
 input[type="text"] {
-	height: 25px;
+    height: 25px;
 }
 
 header {
-	min-width: 360px;
-	height: 50px;
-	position: absolute;
-	background-color: #555;
-	border-right: 1px #000 solid;
-	border-bottom: 1px #000 solid;
-	z-index: 2000;
-	display: inline-block;
+    min-width: 360px;
+    height: 50px;
+    position: absolute;
+    background-color: #555;
+    border-right: 1px #000 solid;
+    border-bottom: 1px #000 solid;
+    z-index: 2000;
+    display: inline-block;
 }
 
 @media (max-width: 600px) {
-	header{
-		width: 100%;
-	}
+    header{
+        width: 100%;
+    }
 }
 
 @media (max-width: 400px) {
-	header h1{
-		font-size: 28px;
-	}
+    header h1{
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 350px) {
-	header h1{
-		font-size: 20px;
-	}
+    header h1{
+        font-size: 20px;
+    }
 }
 
 header.aboutHeader {
-	width: 100%;
-	border-right: 0;
+    width: 100%;
+    border-right: 0;
 }
 
 header > a {
-	display: flex;
-	color: #FFF;
-	/*align-items: center;*/
+    display: flex;
+    color: #FFF;
+    /*align-items: center;*/
 }
 
 header > a:hover {
-	text-decoration: none;
-	color: #FFAA00;
+    text-decoration: none;
+    color: #FFAA00;
 }
 
 header h1 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
 #logo {
-	padding: 5px;
-	/*background-color: #FFF;*/
+    padding: 5px;
+    /*background-color: #FFF;*/
 }
 
 h1 {
-	font-weight: lighter;
-	padding: 0 10px;
-	display: inline-block;
-	margin-top: 0;
-	line-height: 45px;
-	position: absolute;
-	top: 0;
-	left: 50px;
-	text-shadow: 1px 1px 0 #000;
+    font-weight: lighter;
+    padding: 0 10px;
+    display: inline-block;
+    margin-top: 0;
+    line-height: 45px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    text-shadow: 1px 1px 0 #000;
 }
 
 select {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%2215.26367%22%0A%20%20%20height%3D%2215.3125%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-188.36328%2C-392.51062%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20id%3D%22text2985%22%0A%20%20%20%20%20%20%20style%3D%22font-size%3A20px%3Bfont-style%3Anormal%3Bfont-variant%3Anormal%3Bfont-weight%3Anormal%3Bfont-stretch%3Anormal%3Btext-align%3Acenter%3Bline-height%3A125%25%3Bletter-spacing%3A0px%3Bword-spacing%3A0px%3Btext-anchor%3Amiddle%3Bfill%3A%23000000%3Bfill-opacity%3A1%3Bstroke%3Anone%3Bfont-family%3AOpen%20Sans%3B-inkscape-font-specification%3AOpen%20Sans%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22m%20188.36328%2C392.51062%2015.26367%2C0%20-7.63672%2C15.3125%20-7.62695%2C-15.3125%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2990%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-opacity%3A0.63274339%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
-		,linear-gradient(to bottom, #888, #666);
-	background-repeat: no-repeat, repeat;
-	background-position: calc(100% - 10px) center, 0 0;
-	background-size: 10px, cover;
-	border: 1px #222 outset;
-	color: #FFF;
-	cursor: pointer;
-	padding: 3px;
-	padding-left: 7px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%2215.26367%22%0A%20%20%20height%3D%2215.3125%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-188.36328%2C-392.51062%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20id%3D%22text2985%22%0A%20%20%20%20%20%20%20style%3D%22font-size%3A20px%3Bfont-style%3Anormal%3Bfont-variant%3Anormal%3Bfont-weight%3Anormal%3Bfont-stretch%3Anormal%3Btext-align%3Acenter%3Bline-height%3A125%25%3Bletter-spacing%3A0px%3Bword-spacing%3A0px%3Btext-anchor%3Amiddle%3Bfill%3A%23000000%3Bfill-opacity%3A1%3Bstroke%3Anone%3Bfont-family%3AOpen%20Sans%3B-inkscape-font-specification%3AOpen%20Sans%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22m%20188.36328%2C392.51062%2015.26367%2C0%20-7.63672%2C15.3125%20-7.62695%2C-15.3125%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2990%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-opacity%3A0.63274339%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
+        ,linear-gradient(to bottom, #888, #666);
+    background-repeat: no-repeat, repeat;
+    background-position: calc(100% - 10px) center, 0 0;
+    background-size: 10px, cover;
+    border: 1px #222 outset;
+    color: #FFF;
+    cursor: pointer;
+    padding: 3px;
+    padding-left: 7px;
 }
 
 select option[disabled] {
@@ -210,888 +210,888 @@ select option[disabled] {
 }
 
 select:hover {
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%2215.26367%22%0A%20%20%20height%3D%2215.3125%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-188.36328%2C-392.51062%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20id%3D%22text2985%22%0A%20%20%20%20%20%20%20style%3D%22font-size%3A20px%3Bfont-style%3Anormal%3Bfont-variant%3Anormal%3Bfont-weight%3Anormal%3Bfont-stretch%3Anormal%3Btext-align%3Acenter%3Bline-height%3A125%25%3Bletter-spacing%3A0px%3Bword-spacing%3A0px%3Btext-anchor%3Amiddle%3Bfill%3A%23000000%3Bfill-opacity%3A1%3Bstroke%3Anone%3Bfont-family%3AOpen%20Sans%3B-inkscape-font-specification%3AOpen%20Sans%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22m%20188.36328%2C392.51062%2015.26367%2C0%20-7.63672%2C15.3125%20-7.62695%2C-15.3125%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2990%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-opacity%3A0.63274339%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
-		,linear-gradient(to bottom, #999, #777);
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%2215.26367%22%0A%20%20%20height%3D%2215.3125%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-188.36328%2C-392.51062%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20id%3D%22text2985%22%0A%20%20%20%20%20%20%20style%3D%22font-size%3A20px%3Bfont-style%3Anormal%3Bfont-variant%3Anormal%3Bfont-weight%3Anormal%3Bfont-stretch%3Anormal%3Btext-align%3Acenter%3Bline-height%3A125%25%3Bletter-spacing%3A0px%3Bword-spacing%3A0px%3Btext-anchor%3Amiddle%3Bfill%3A%23000000%3Bfill-opacity%3A1%3Bstroke%3Anone%3Bfont-family%3AOpen%20Sans%3B-inkscape-font-specification%3AOpen%20Sans%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22m%20188.36328%2C392.51062%2015.26367%2C0%20-7.63672%2C15.3125%20-7.62695%2C-15.3125%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2990%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3A%23ffffff%3Bfill-opacity%3A0.63274339%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
+        ,linear-gradient(to bottom, #999, #777);
 }
 
 select:active {
-	background-image: linear-gradient(to bottom, #666, #777);
-	background-color: #666;
+    background-image: linear-gradient(to bottom, #666, #777);
+    background-color: #666;
 }
 
 option,
 optgroup {
-	background-color: #555;
-	font-size: 16px;
-	border-color: #BBB;
+    background-color: #555;
+    font-size: 16px;
+    border-color: #BBB;
 }
 
 #linesCanvas {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	/*width: calc(100% - 320px);*/
-	width: 100%;
-	z-index: -500;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    /*width: calc(100% - 320px);*/
+    width: 100%;
+    z-index: -500;
 }
 
 #container {
-	width: calc(100% - 320px);
-	height: 100%;
-	margin-left: 320px;
+    width: calc(100% - 320px);
+    height: 100%;
+    margin-left: 320px;
 
-	touch-action: manipulation;
+    touch-action: manipulation;
 
-	overflow: hidden;
-	overflow-x: hidden;
-	overflow-y: hidden;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #loading {
-	position: absolute;
-	background-color: rgba(10, 10, 10, .9);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 100;
+    position: absolute;
+    background-color: rgba(10, 10, 10, .9);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
 }
 
 #loading > div {
-	margin: 80px auto;
-	color: #FFF;
-	text-align: center;
-	font-size: 40px;
+    margin: 80px auto;
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
 }
 
 #loading > div > div:first-child {
-	width: 200px;
-	height: 200px;
-	border-radius: 200px;
-	border: 7px #CCC solid;
-	display: inline-block;
-	border-top-color: #FFAA00;
-	
-	animation-duration: 3s;
-	animation-name: spinner;
-	animation-iteration-count: infinite;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 7px #CCC solid;
+    display: inline-block;
+    border-top-color: #FFAA00;
+    
+    animation-duration: 3s;
+    animation-name: spinner;
+    animation-iteration-count: infinite;
 }
 
 #loading > div > span {
-	font-family: "DejaVu Sans", Helvetica, sans-serif;
-	font-weight: 200;
+    font-family: "DejaVu Sans", Helvetica, sans-serif;
+    font-weight: 200;
 }
 
 @keyframes spinner {
-	from {
-		transform: rotateZ(0deg);
-	}
-	
-	to {
-		transform: rotateZ(360deg);
-	}
+    from {
+        transform: rotateZ(0deg);
+    }
+    
+    to {
+        transform: rotateZ(360deg);
+    }
 }
 
 .error {
-	color: #FFF;
-	font-size: 23px;
-	margin: 15px 0;
+    color: #FFF;
+    font-size: 23px;
+    margin: 15px 0;
 }
 
 .errorBody {
-	color: #CC8888;
-	font-family: monospace;
-	font-size: 20px;
-	cursor: text;
+    color: #CC8888;
+    font-family: monospace;
+    font-size: 20px;
+    cursor: text;
 }
 
 noscript {
-	color: #FFF;
-	font-size: 23px;
-	display: block;
-	margin-top: 10px;
+    color: #FFF;
+    font-size: 23px;
+    display: block;
+    margin-top: 10px;
 }
 
 .listHidden #container {
-	width: 100%;
-	margin-left: 0;
+    width: 100%;
+    margin-left: 0;
 }
 
 #innerContainer {
-	height: 2000px;
-	width: 2000px;
-	position: absolute;
-	z-index: -2000;
+    height: 2000px;
+    width: 2000px;
+    position: absolute;
+    z-index: -2000;
 }
 
 #image {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: -1500;
-	image-rendering: -moz-crisp-edges;
-	image-rendering: pixelated;
-	-ms-interpolation-mode: nearest-neighbor;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1500;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
 }
 
 #highlightCanvas {
-	z-index: -1200;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	image-rendering: -moz-crisp-edges;
-	image-rendering: pixelated;
-	-ms-interpolation-mode: nearest-neighbor;
+    z-index: -1200;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
 }
 
 #objectsList {
-	max-width: 300px;
-	width: calc(100% - 10px);
-	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 0;
-	max-height: calc(100% - 40px);
-	overflow-y: auto;
-	z-index: 0;
+    max-width: 300px;
+    width: calc(100% - 10px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    max-height: calc(100% - 40px);
+    overflow-y: auto;
+    z-index: 0;
 }
 
 #closeObjectsListButton {
-	height: 40px;
-	width: 40px;
-	position: absolute;
-	top: 10px;
-	right: 310px;
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22matrix%281.2121574%2C0%2C0%2C1.2121574%2C-20.456139%2C-20.460051%29%22%0A%20%20%20%20%20id%3D%22g3804%22%0A%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20%20%20id%3D%22layer1%22%0A%20%20%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20195.27845%2C552.79802%20310.43583%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20310.43583%2C552.79802%20195.27845%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path3802%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
-		,linear-gradient(to bottom, #666, #444);
-	background-size: 15px, cover;
-	background-position: center, 0 0;
-	background-repeat: no-repeat, no-repeat;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 310px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22matrix%281.2121574%2C0%2C0%2C1.2121574%2C-20.456139%2C-20.460051%29%22%0A%20%20%20%20%20id%3D%22g3804%22%0A%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20%20%20id%3D%22layer1%22%0A%20%20%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20195.27845%2C552.79802%20310.43583%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20310.43583%2C552.79802%20195.27845%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path3802%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
+        ,linear-gradient(to bottom, #666, #444);
+    background-size: 15px, cover;
+    background-position: center, 0 0;
+    background-repeat: no-repeat, no-repeat;
 }
 
 #closeObjectsListButton.hidden {
-	display: none;
+    display: none;
 }
 
 #closeObjectsListButton:hover {
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22matrix%281.2121574%2C0%2C0%2C1.2121574%2C-20.456139%2C-20.460051%29%22%0A%20%20%20%20%20id%3D%22g3804%22%0A%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20%20%20id%3D%22layer1%22%0A%20%20%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20195.27845%2C552.79802%20310.43583%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20310.43583%2C552.79802%20195.27845%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path3802%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
-		,linear-gradient(to bottom, #777, #555);
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22matrix%281.2121574%2C0%2C0%2C1.2121574%2C-20.456139%2C-20.460051%29%22%0A%20%20%20%20%20id%3D%22g3804%22%0A%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20%20%20id%3D%22layer1%22%0A%20%20%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20195.27845%2C552.79802%20310.43583%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20310.43583%2C552.79802%20195.27845%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path3802%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
+        ,linear-gradient(to bottom, #777, #555);
 }
 
 @media (max-width: 750px) {
-	div:not(.listHidden) > #objectsList {
-		display: none;
-	}
-	div:not(.listHidden) > #closeObjectsListButton {
-		display: none;
-	}
+    div:not(.listHidden) > #objectsList {
+        display: none;
+    }
+    div:not(.listHidden) > #closeObjectsListButton {
+        display: none;
+    }
 }
 
 @media (max-width: 700px) {
-	#objectsList {
-		top: 50px;
-		max-height: calc(100% - 90px);
-	}
+    #objectsList {
+        top: 50px;
+        max-height: calc(100% - 90px);
+    }
 }
 
 @media (max-width: 750px) {
-	#closeObjectsListButton {
-		top: 60px;
-	}
+    #closeObjectsListButton {
+        top: 60px;
+    }
 }
 
 @media (max-width: 530px) {
-	#objectsList {
-		top: 80px;
-		max-height: calc(100% - 130px);
-	}
-	
-	#closeObjectsListButton {
-		top: 55px;
-		right: 10px;
-		height: 30px;
-		width: 30px;
-	}
+    #objectsList {
+        top: 80px;
+        max-height: calc(100% - 130px);
+    }
+    
+    #closeObjectsListButton {
+        top: 55px;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+    }
 }
 
 .object {
-	background-color: #555;
-	border: 1px #000 solid;
-	margin: 10px 10px 0 0;
-	padding: 10px;
-	overflow-x: auto;
+    background-color: #555;
+    border: 1px #000 solid;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+    overflow-x: auto;
 }
 
 .object:hover {
-	background-color: #666;
-	border-color: #FFF;
+    background-color: #666;
+    border-color: #FFF;
 }
 
 .object:hover a {
-	background-color: #555;
+    background-color: #555;
 }
 
 .object:hover h2 {
-	background-color: #777;
+    background-color: #777;
 }
 
 .object > * {
-	display: block;
+    display: block;
 }
 
 .object h2 {
-	display: block;
-	font-size: 20px;
-	background-color: #666;
-	text-shadow: 1px 1px 0 #000;
-	margin: 0 -10px 10px -10px;
-	font-weight: 300;
+    display: block;
+    font-size: 20px;
+    background-color: #666;
+    text-shadow: 1px 1px 0 #000;
+    margin: 0 -10px 10px -10px;
+    font-weight: 300;
 }
 
 .object h2 a {
-	color: #FFF;
-	padding: 3px 10px;
-	display: block;
-	height: 100%;
-	width: 100%;
+    color: #FFF;
+    padding: 3px 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .object h2 a:hover {
-	color: #FFAA00;
+    color: #FFAA00;
 }
 
 .object a {
-	background-color: #666666;
-	text-align: center;
-	padding: 3px;
-	margin-bottom: 5px;
+    background-color: #666666;
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 5px;
 }
 
 .object a.inline {
-	background-color: transparent;
-	display: inline;
-	padding: 0;
-	margin: 0;
+    background-color: transparent;
+    display: inline;
+    padding: 0;
+    margin: 0;
 }
 
 .object a.inline:hover {
-	background-color: transparent;
-	text-decoration: underline;
+    background-color: transparent;
+    text-decoration: underline;
 }
 
 .object a:hover {
-	background-color: #777;
-	text-decoration: none;
+    background-color: #777;
+    text-decoration: none;
 }
 
 .object p {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #drawControlsContainer {
-	background-color: #444;
-	border-right: 1px #000 solid;
-	width: 360px;
-	position: absolute;
-	left: 0;
-	top: 50px;
-	bottom: 0;
-	overflow-y: auto;
-	display: none;
-	padding: 0 20px;
+    background-color: #444;
+    border-right: 1px #000 solid;
+    width: 360px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-y: auto;
+    display: none;
+    padding: 0 20px;
 }
 
 .draw #drawControlsContainer {
-	display: block;
+    display: block;
 }
 
 #drawControls {
-	width: 250px;
-	padding: 15px;
-	margin: 10px auto;
-	background-color: #555;
+    width: 250px;
+    padding: 15px;
+    margin: 10px auto;
+    background-color: #555;
 }
 
 #drawBackButton {
-	margin: 10px auto 0 auto;
-	display: block;
-	width: 170px;
+    margin: 10px auto 0 auto;
+    display: block;
+    width: 170px;
 }
 
 #drawControls > * {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
 }
 
 #drawControls > * > * {
-	flex-grow: 1;
-	margin-right: 5px;
+    flex-grow: 1;
+    margin-right: 5px;
 }
 
 #drawControls > * > *:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
 .checkboxLabel {
-	background-color: #666;
-	padding: 3px;
-	cursor: pointer;
+    background-color: #666;
+    padding: 3px;
+    cursor: pointer;
 }
 
 .checkboxLabel:hover {
-	background-color: #777;
+    background-color: #777;
 }
 
 #drawControls .checkboxLabel {
-	display: inline-block;
+    display: inline-block;
 }
 
 input[type="checkbox"] {
-	margin: 3px;
-	vertical-align: middle;
-	display: inline-block;
-	width: 15px;
-	height: 15px;
+    margin: 3px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
 }
 
 #hint {
-	display: block;
-	text-align: left;
-	color: #DDD;
+    display: block;
+    text-align: left;
+    color: #DDD;
 }
 
 #hint p {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #objectInfo {
-	display: none;
+    display: none;
 }
 
 #objectInfo input {
-	width: 100%;
+    width: 100%;
 }
 
 #descriptionField {
-	width: 220px;
-	height: 70px;
+    width: 220px;
+    height: 70px;
 }
 
 #infoButtons {
-	display: flex;
-	margin-top: 10px;
+    display: flex;
+    margin-top: 10px;
 }
 
 #infoButtons button {
-	width: 50px;
-	flex-grow: 1;
-	margin-right: 10px;
+    width: 50px;
+    flex-grow: 1;
+    margin-right: 10px;
 }
 
 #infoButtons button:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
 .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, .8);
-	display: none;
-	justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    justify-content: center;
 }
 
 #exportWindow {
-	margin: 50px auto;
-	padding: 10px;
-	width: 100%;
-	height: calc(100% - 100px);
-	max-width: 500px;
-	/*max-height: 300px*/;
+    margin: 50px auto;
+    padding: 10px;
+    width: 100%;
+    height: calc(100% - 100px);
+    max-width: 500px;
+    /*max-height: 300px*/;
 
-	border: 1px #000 solid;
-	background-color: #555;
+    border: 1px #000 solid;
+    background-color: #555;
 
-	display: flex;
-	flex-direction: column;
-	overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 #exportWindow * {
-	flex-shrink: 0;
-	margin-bottom: 10px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
 }
 
 #exportWindow p {
-	
+    
 }
 
 #exportString {
-	flex-grow: 1;
-	flex-shrink: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
 }
 
 #exportCloseButton {
-	margin-bottom: 0;
-	width: 100px;
-	align-self: flex-end;
+    margin-bottom: 0;
+    width: 100px;
+    align-self: flex-end;
 }
 
 #exportOverlay {
-	display: none;
+    display: none;
 }
 
 #zoomControls {
-	position: absolute;
-	bottom: 10px;
-	left: 370px;
-	width: 90px;
-	display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 370px;
+    width: 90px;
+    display: flex;
 }
 
 .listHidden #zoomControls {
-	left: 10px;
+    left: 10px;
 }
 
 #zoomControls button {
-	display: inline-block;
-	height: 30px;
-	width: 30px;
-	margin-left: -1px;
-	flex-grow: 1;
-	font-size: 20px;
-	line-height: 0;
-	font-weight: 300;
-	background-size: 15px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #555;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-left: -1px;
+    flex-grow: 1;
+    font-size: 20px;
+    line-height: 0;
+    font-weight: 300;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #555;
 }
 
 #zoomControls button:focus {
-	outline: none;
+    outline: none;
 }
 
 #zoomControls button:hover {
-	background-color: #666;
+    background-color: #666;
 }
 
 #zoomInButton {
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20171.42857%2C495.21933%20162.85714%2C0%22%0A%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20252.85714%2C413.79076%200%2C162.85714%22%0A%20%20%20%20%20%20%20id%3D%22path3755%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20171.42857%2C495.21933%20162.85714%2C0%22%0A%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20252.85714%2C413.79076%200%2C162.85714%22%0A%20%20%20%20%20%20%20id%3D%22path3755%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A");
 }
 
 button#zoomResetButton {
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20334.28394%2C576.65207%20-162.85044%2C0%20-4.6e-4%2C-162.86607%20162.85078%2C0%20z%22%0A%20%20%20%20%20%20%20id%3D%22path3755%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20334.28394%2C576.65207%20-162.85044%2C0%20-4.6e-4%2C-162.86607%20162.85078%2C0%20z%22%0A%20%20%20%20%20%20%20id%3D%22path3755%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
 }
 
 #zoomOutButton {
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20171.42857%2C495.21933%20162.85714%2C0%22%0A%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20171.42857%2C495.21933%20162.85714%2C0%22%0A%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
 }
 
 #entriesListContainer {
-	position: absolute;
-	left: 10px;
-	top: 50px;
-	bottom: 0;
-	padding-bottom: 0;
-	width: 340px;
-	display: flex;
-	flex-direction: column;
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    bottom: 0;
+    padding-bottom: 0;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 500px) {
-	div#entriesListContainer {
-		width: calc(100% - 20px);
-	}
-	
-	div#entriesListBackground {
-		width: 100%;
-	}
+    div#entriesListContainer {
+        width: calc(100% - 20px);
+    }
+    
+    div#entriesListBackground {
+        width: 100%;
+    }
 
-	div:not(.listHidden) > #zoomControls {
-		display: none;
-	}
+    div:not(.listHidden) > #zoomControls {
+        display: none;
+    }
 
-	div:not(.listHidden) > button#hideListButton {
-		background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22matrix%281.2121574%2C0%2C0%2C1.2121574%2C-20.456139%2C-20.460051%29%22%0A%20%20%20%20%20id%3D%22g3804%22%0A%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20%20%20id%3D%22layer1%22%0A%20%20%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20195.27845%2C552.79802%20310.43583%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20310.43583%2C552.79802%20195.27845%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path3802%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
-		background-size: 20px;
-		position: absolute;
-		top: 55px;
-		right: 10px;
-		left: initial;
-		border: 1px #000 solid;
-		width: 40px;
-		height: 40px;
-	}
+    div:not(.listHidden) > button#hideListButton {
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22192.84375%22%0A%20%20%20height%3D%22192.875%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22matrix%281.2121574%2C0%2C0%2C1.2121574%2C-20.456139%2C-20.460051%29%22%0A%20%20%20%20%20id%3D%22g3804%22%0A%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%3Cg%0A%20%20%20%20%20%20%20transform%3D%22translate%28-156.4375%2C-398.78125%29%22%0A%20%20%20%20%20%20%20id%3D%22layer1%22%0A%20%20%20%20%20%20%20style%3D%22stroke%3A%23ffffff%3Bstroke-opacity%3A1%22%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20195.27845%2C552.79802%20310.43583%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20d%3D%22M%20310.43583%2C552.79802%20195.27845%2C437.64064%22%0A%20%20%20%20%20%20%20%20%20id%3D%22path3802%22%0A%20%20%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A24.74926186%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
+        background-size: 20px;
+        position: absolute;
+        top: 55px;
+        right: 10px;
+        left: initial;
+        border: 1px #000 solid;
+        width: 40px;
+        height: 40px;
+    }
 
-	#entriesListContainer > nav {
-		width: calc(100% - 45px);
-	}
+    #entriesListContainer > nav {
+        width: calc(100% - 45px);
+    }
 }
 
 @media (max-width: 750px) {
-	div:not(.listHidden) > #author {
-		display: none;
-	}
+    div:not(.listHidden) > #author {
+        display: none;
+    }
 }
 
 @media (max-width: 400px) {
-	#author {
-		display: none;
-	}
+    #author {
+        display: none;
+    }
 }
 
 @media (max-width: 350px) {
-	#entriesListContainer > nav > a#drawLink {
-		display: none;
-	}
+    #entriesListContainer > nav > a#drawLink {
+        display: none;
+    }
 }
 
 .draw #entriesListContainer {
-	display: none;
+    display: none;
 }
 
 .listHidden #entriesListContainer {
-	display: none;
+    display: none;
 }
 
 #entriesListContainer > nav {
-	margin: 10px 0;
-	display: flex;
-	flex-shrink: 0;
-	justify-content: center;
+    margin: 10px 0;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
 }
 
 #entriesListContainer > nav > a,
 #entriesListContainer > nav > button {
-	background-image: linear-gradient(to bottom, #888, #666);
-	border: 1px #000 solid;
-	color: #FFF;
-	text-align: center;
-	display: block;
-	padding: 4px;
-	cursor: pointer;
-	width: 120px;
-	height: 30px;
-	margin-right: 10px;
-	text-shadow: 1px 1px 0 #444;
+    background-image: linear-gradient(to bottom, #888, #666);
+    border: 1px #000 solid;
+    color: #FFF;
+    text-align: center;
+    display: block;
+    padding: 4px;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    margin-right: 10px;
+    text-shadow: 1px 1px 0 #444;
 }
 
 #entriesListContainer > nav > button {
-	width: 30px;
-	padding: 2px;
-	flex-shrink: 0;
+    width: 30px;
+    padding: 2px;
+    flex-shrink: 0;
 }
 
 #entriesListContainer > nav > button > img {
-	height: 22px;
-	width: 22px;
+    height: 22px;
+    width: 22px;
 }
 
 #entriesListContainer > nav > button:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
 #entriesListContainer > nav > a:hover {
-	text-decoration: none;
-	background-image: linear-gradient(to bottom, #999, #777);
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #999, #777);
 }
 
 #entriesListContainer > nav > button:hover {
-	background-image: none;
-	background: transparent;
-	border-color: transparent;
+    background-image: none;
+    background: transparent;
+    border-color: transparent;
 }
 
 #entriesListContainer > nav > button:hover > img {
-	text-decoration: none;
-	background-image: linear-gradient(to bottom, #FFAA00, #FFAA00);
-	border-radius: 15px;
-	padding: 3px;
-	margin: -3px;
-	height: 28px;
-	width: 28px;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #FFAA00, #FFAA00);
+    border-radius: 15px;
+    padding: 3px;
+    margin: -3px;
+    height: 28px;
+    width: 28px;
 }
 #entriesListContainer > nav > button:hover > img.Discord {
-	text-decoration: none;
-	background-image: linear-gradient(to bottom, #7289DA, #7289DA);
-	border-radius: 12px;
-	padding: 3px;
-	margin: -3px;
-	height: 28px;
-	width: 28px;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #7289DA, #7289DA);
+    border-radius: 12px;
+    padding: 3px;
+    margin: -3px;
+    height: 28px;
+    width: 28px;
 }
 
 #entriesListBackground {
-	position: absolute;
-	left: 0;
-	top: 50px;
-	bottom: 0;
-	width: 360px;
-	z-index: -600;
-	background-color: #333;
-	border-right: 1px #000 solid;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    width: 360px;
+    z-index: -600;
+    background-color: #333;
+    border-right: 1px #000 solid;
 }
 
 .draw #entriesListBackground {
-	display: none;
+    display: none;
 }
 
 .listHidden #entriesListBackground {
-	display: none;
+    display: none;
 }
 
 #hideListButton {
-	position: absolute;
-	height: 100px;
-	width: 15px;
-	top: 60px;
-	left: 360px;
-	border-left: none;
-	background-color: #444;
-	background-size: 7px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22165.15738%22%0A%20%20%20height%3D%22260.42575%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-170.27845%2C-307.37227%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22M%20310.43583%2C552.79802%20195.27845%2C437.58514%20310.43583%2C322.37227%22%0A%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
+    position: absolute;
+    height: 100px;
+    width: 15px;
+    top: 60px;
+    left: 360px;
+    border-left: none;
+    background-color: #444;
+    background-size: 7px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22165.15738%22%0A%20%20%20height%3D%22260.42575%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-170.27845%2C-307.37227%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22M%20310.43583%2C552.79802%20195.27845%2C437.58514%20310.43583%2C322.37227%22%0A%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
 }
 
 .listHidden #hideListButton::before {
-	content: "Show List";
-	font-size: 17px;
-	font-weight: 300;
-	color: #BBB;
-	margin-left: 20px;
+    content: "Show List";
+    font-size: 17px;
+    font-weight: 300;
+    color: #BBB;
+    margin-left: 20px;
 }
 
 #hideListButton:hover {
-	background-color: #555;
+    background-color: #555;
 }
 
 .draw #hideListButton {
-	display: none;
+    display: none;
 }
 
 .listHidden #hideListButton {
-	background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22272.84375%22%0A%20%20%20height%3D%22177.59375%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-116.4375%2C-348.78125%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22M%20368.07001%2C380.00645%20252.85714%2C495.16383%20137.64427%2C380.00645%22%0A%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
-		,linear-gradient(to bottom, #555, #444);
-	background-size: 15px, cover;
-	background-position: 10px center, 0 0;
-	top: 49px;
-	left: 20px;
-	border: 1px #000 solid;
-	border-top: 1px #333 solid;
-	width: 130px;
-	height: 35px;
-	z-index: 2000;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%0A%20%20%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%0A%20%20%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%0A%20%20%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20version%3D%221.1%22%0A%20%20%20width%3D%22272.84375%22%0A%20%20%20height%3D%22177.59375%22%0A%20%20%20id%3D%22svg2%22%3E%0A%20%20%3Cdefs%0A%20%20%20%20%20id%3D%22defs4%22%20/%3E%0A%20%20%3Cmetadata%0A%20%20%20%20%20id%3D%22metadata7%22%3E%0A%20%20%20%20%3Crdf%3ARDF%3E%0A%20%20%20%20%20%20%3Ccc%3AWork%0A%20%20%20%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Aformat%3Eimage/svg+xml%3C/dc%3Aformat%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%3D%22http%3A//purl.org/dc/dcmitype/StillImage%22%20/%3E%0A%20%20%20%20%20%20%20%20%3Cdc%3Atitle%3E%3C/dc%3Atitle%3E%0A%20%20%20%20%20%20%3C/cc%3AWork%3E%0A%20%20%20%20%3C/rdf%3ARDF%3E%0A%20%20%3C/metadata%3E%0A%20%20%3Cg%0A%20%20%20%20%20transform%3D%22translate%28-116.4375%2C-348.78125%29%22%0A%20%20%20%20%20id%3D%22layer1%22%3E%0A%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20d%3D%22M%20368.07001%2C380.00645%20252.85714%2C495.16383%20137.64427%2C380.00645%22%0A%20%20%20%20%20%20%20id%3D%22path2985%22%0A%20%20%20%20%20%20%20style%3D%22fill%3Anone%3Bstroke%3A%23ffffff%3Bstroke-width%3A30%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-opacity%3A1%3Bstroke-dasharray%3Anone%22%20/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E")
+        ,linear-gradient(to bottom, #555, #444);
+    background-size: 15px, cover;
+    background-position: 10px center, 0 0;
+    top: 49px;
+    left: 20px;
+    border: 1px #000 solid;
+    border-top: 1px #333 solid;
+    width: 130px;
+    height: 35px;
+    z-index: 2000;
 }
 
 #hideListButton:focus {
-	outline: none;
+    outline: none;
 }
 
 #entriesListControls {
-	background-color: #555;
-	border: 1px #000 solid;
-	color: #CCC;
-	padding: 10px;
-	margin-bottom: 10px;
+    background-color: #555;
+    border: 1px #000 solid;
+    color: #CCC;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 #entriesListControls input:focus {
-	outline: none;
-	border-color: #CCC;
+    outline: none;
+    border-color: #CCC;
 }
 
 #atlasSize {
-	display: block;
-	margin: 3px 0 5px 0;
+    display: block;
+    margin: 3px 0 5px 0;
 }
 
 #searchList {
-	width: 100%;
+    width: 100%;
 }
 
 #sortContainer {
-	
+    
 }
 
 #sortContainer label {
-	width: 70px;
+    width: 70px;
 }
 
 #sort {
-	width: 150px;
+    width: 150px;
 }
 
 #entriesListControls {
-	width: 100%;
+    width: 100%;
 }
 
 #entriesList {
-	overflow-y: auto;
-	direction: rtl;
-	padding-bottom: 10px;
-	text-align: center;
+    overflow-y: auto;
+    direction: rtl;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 #entriesList .object {
-	direction: ltr;
-	margin: 0 0 10px 5px;
-	text-align: left;
+    direction: ltr;
+    margin: 0 0 10px 5px;
+    text-align: left;
 }
 
 #author {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	background-color: #555;
-	border: 1px #000 solid;
-	padding: 3px;
-	font-size: 12px;
-	z-index: 1100;
-	text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #555;
+    border: 1px #000 solid;
+    padding: 3px;
+    font-size: 12px;
+    z-index: 1100;
+    text-align: center;
 }
 
 #aboutContainer {
-	position: absolute;
-	top: 50px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #333;
-	display: block;
-	z-index: 2000;
-	overflow-y: auto;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    display: block;
+    z-index: 2000;
+    overflow-y: auto;
 }
 
 #aboutBackButton {
-	margin: 20px 20px 0 20px;
-	padding: 10px 20px;
+    margin: 20px 20px 0 20px;
+    padding: 10px 20px;
 }
 
 #aboutBackButtonContainer {
-	/*margin: 0 auto;
-	width: 100%;
-	max-width: 1300px;*/
+    /*margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;*/
 }
 
 #about {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1000px;
-	padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 10px;
 }
 
 #about a {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 
 #about h2 {
-	font-weight: 300;
-	font-size: 30px;
-	margin-top: 30px;
-	margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 #about h3 {
-	line-height: 1.4em;
-	text-align: center;
+    line-height: 1.4em;
+    text-align: center;
 }
 
 #contributors {
-	text-align: justify;
-	margin-top: 15px;
-	margin-bottom: 15px;
+    text-align: justify;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #contributors a {
-	margin: 3px;
+    margin: 3px;
     line-height: 26px;
 }
 
 #bitcoinButton {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 #bitcoinWindow,
 #donateWindow {
-	display: inline-block;
-	z-index: 2000;
-	max-width: 400px;
-	background-color: #444;
-	border: 1px #000 solid;
-	width: 100%;
-	text-align: center;
-	min-height: 50px;
-	max-height: 500px;
-	overflow: auto;
-	height: auto;
-	align-self: center;
+    display: inline-block;
+    z-index: 2000;
+    max-width: 400px;
+    background-color: #444;
+    border: 1px #000 solid;
+    width: 100%;
+    text-align: center;
+    min-height: 50px;
+    max-height: 500px;
+    overflow: auto;
+    height: auto;
+    align-self: center;
 }
 
 #donateWindow {
-	top: 20px;
-	max-height: 100%;
-	max-width: 800px;
+    top: 20px;
+    max-height: 100%;
+    max-width: 800px;
 }
 
 #donateWindow > #bitcoinQR {
-	
+    
 }
 
 #donateWindow > p {
-	margin: 2px 0;
-	padding: 0 20px;
-	text-align: left;
-	width: 100%;
+    margin: 2px 0;
+    padding: 0 20px;
+    text-align: left;
+    width: 100%;
 }
 
 #bitcoinWindow > *,
 #donateWindow > * {
-	display: inline-block;
-	margin: 5px 0;
+    display: inline-block;
+    margin: 5px 0;
 }
 
 #bitcoinWindow > h2,
 #donateWindow > h2 {
-	font-weight: 200;
-	background-color: #555;
-	width: 100%;
-	line-height: 1.5em;
-	margin: 10px 0;
-	text-shadow: 1px 1px 0 #000;
+    font-weight: 200;
+    background-color: #555;
+    width: 100%;
+    line-height: 1.5em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 0 #000;
 }
 
 #bitcoinWindow input,
 #donateWindow input {
-	width: 100%;
-	max-width: 350px;
-	font-size: 14px;
-	background-color: #666;
-	text-align: center;
-	cursor: text;
-	color: #FFF;
+    width: 100%;
+    max-width: 350px;
+    font-size: 14px;
+    background-color: #666;
+    text-align: center;
+    cursor: text;
+    color: #FFF;
 }
 
 #bitcoinWindow button,
 #donateWindow button {
-	padding: 10px 20px;
-	margin-bottom: 20px;
-	margin-top: 10px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 h2#abouth2 {
-	font-size: 40px;
-	margin-bottom: 20px;
-	text-shadow: 2px 2px 0 #000;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #000;
 }
 
 #bitcoinNotice {
-	color: #AAA;
-	margin-top: 7px;
+    color: #AAA;
+    margin-top: 7px;
 }
