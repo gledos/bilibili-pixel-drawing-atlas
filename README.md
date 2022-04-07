@@ -2,7 +2,7 @@
 
 这是交互式的哔哩哔哩夏日绘板活动的互动地图集，目标是为大部分的图像添加注释。
 
-This project was created by Roland Rytz,  Stefano Haagmans and is licensed under the GNU Affero General Public License v3.0.
+This project was created by [Roland Rytz](https://github.com/RolandR/place-atlas), [placeAtlas/atlas](https://github.com/placeAtlas/atlas) and is licensed under the GNU Affero General Public License v3.0.
 
 ---
 
