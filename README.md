@@ -28,4 +28,4 @@ This project was created by Roland Rytz,  Stefano Haagmans and is licensed under
 
 ## 鸣谢列表
 
-[Dreamink0 (Dream_ink)](https://github.com/Dreamink0)、[duyya](https://github.com/duyya)
+[Dreamink0 (Dream_ink)](https://github.com/Dreamink0)、[duyya](https://github.com/duyya)、[yzqzss](https://github.com/yzqzss)
