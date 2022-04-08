@@ -337,7 +337,9 @@ function initView() {
                 }
 
                 if (changed) {
-                    hovered = newHovered;
+                    hovered = newHovered.sort(function (a, b) {
+                        return calcPolygonArea(a.path) - calcPolygonArea(b.path);
+                    });
 
                     objectsContainer.innerHTML = "";
 
@@ -441,6 +443,14 @@ function initView() {
                     return 0;
                 }
                 break;
+
+                break;
+            case "area":
+                sortFunction = function (a, b) {
+                    return calcPolygonArea(b.path) - calcPolygonArea(a.path);
+                }
+                break;
+
             case "relevant":
                 sortFunction = function (a, b) {
                     if (a.name.toLowerCase().indexOf(filter) !== -1 && b.name.toLowerCase().indexOf(filter) !== -1) {
