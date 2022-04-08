@@ -30,4 +30,14 @@ This project was created by [Roland Rytz](https://github.com/RolandR/place-atlas
 
 此项目的记录，离不开以下成员的贡献，非常感谢。
 
-[Dreamink0 (Dream_ink)](https://github.com/Dreamink0)、[duyya](https://github.com/duyya)、[yzqzss](https://github.com/yzqzss)、[mkpoli](https://github.com/mkpoli)、[TingChieh](https://github.com/TingChieh)、[N-628 (Xwyqi Rpwsta)](https://github.com/N-628)、[Jan30chen](https://github.com/Jan30chen)、[ben1222](https://github.com/ben1222)、[Haruha-Raharu](https://github.com/Haruha-Raharu)、[spensll](https://github.com/spensll)
+[Dreamink0 (Dream_ink)](https://github.com/Dreamink0)、
+[duyya](https://github.com/duyya)、
+[yzqzss](https://github.com/yzqzss)、
+[mkpoli](https://github.com/mkpoli)、
+[TingChieh](https://github.com/TingChieh)、
+[N-628 (Xwyqi Rpwsta)](https://github.com/N-628)、
+[Jan30chen](https://github.com/Jan30chen)、
+[ben1222](https://github.com/ben1222)、
+[Haruha-Raharu](https://github.com/Haruha-Raharu)、
+[spensll](https://github.com/spensll)、
+[蟬始鸣](https://space.bilibili.com/19936124 "邮箱署名")
