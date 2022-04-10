@@ -42,4 +42,5 @@ This project was created by [Roland Rytz](https://github.com/RolandR/place-atlas
 [ben1222](https://github.com/ben1222)、
 [Haruha-Raharu](https://github.com/Haruha-Raharu)、
 [spensll](https://github.com/spensll)、
-[蟬始鸣](https://space.bilibili.com/19936124 "邮箱署名")
+[蟬始鸣](https://space.bilibili.com/19936124 "邮箱署名")、
+[X555_DmNg](https://space.bilibili.com/2637931 "邮箱署名")
