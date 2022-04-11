@@ -28,7 +28,7 @@ This project was created by [Roland Rytz](https://github.com/RolandR/place-atlas
 
 上述信息都填好之后，就可以生成 json 格式的数据，接下来就是进入 Github issue 页面，提交给我了。
 
-如果没有 Github 账号，也可以通过电子邮件想我提交，并且请在邮件正文中留下署名，我会将 Github issue 的账号链接或邮件中声明的署名放进鸣谢名单中，我的电子邮箱是 cngledos@gmail.com 。
+如果没有 Github 账号，也可以通过电子邮件向我提交，并且请在邮件正文中留下署名，我会将 Github issue 的账号链接或邮件中声明的署名放进鸣谢名单中，我的电子邮箱是 cngledos@gmail.com 。
 
 如果实在不习惯此绘制工具，也可以使用截图，通过画笔等工具大致指出位置，并附上名称、简介、链接（可选），发送给我。
 
