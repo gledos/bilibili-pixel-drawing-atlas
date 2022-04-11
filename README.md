@@ -6,7 +6,11 @@ This project was created by [Roland Rytz](https://github.com/RolandR/place-atlas
 
 ---
 
-![圖片](https://user-images.githubusercontent.com/23720620/162550329-c5466fbe-e829-4d8b-92d5-698052382d1b.png)
+### 网站截图
+
+![圖片](https://user-images.githubusercontent.com/23720620/162675602-9909cc11-1b53-475a-a4b5-bba66da0fa33.png)
+
+### 链接
 
 这里是 [第一期](https://bilipda.gledos.science/1st/) 与 [第二期](https://bilipda.gledos.science/2nd/) 的夏日绘板。
 
