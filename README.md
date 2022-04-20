@@ -8,7 +8,7 @@ This project was created by [Roland Rytz](https://github.com/RolandR/place-atlas
 
 ### 网站截图
 
-![圖片](https://user-images.githubusercontent.com/23720620/162675602-9909cc11-1b53-475a-a4b5-bba66da0fa33.png)
+![圖片](https://user-images.githubusercontent.com/23720620/164264259-b2e4773c-e7aa-4cf5-9eb3-ad7842c8ce48.png)
 
 ### 链接
 
